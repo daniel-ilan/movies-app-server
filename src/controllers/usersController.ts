@@ -64,7 +64,7 @@ export const addUser = async (req: Request, res: Response) => {
     saveUserPermissions(permissionsJsonData);
 
     return res.status(200).json({
-      message: 'success',
+      message: 'User saved successfully',
     });
   } catch (error) {
     console.log(error);
