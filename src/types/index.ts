@@ -4,6 +4,8 @@ export interface IUser extends Document {
   _id?: ObjectId;
   username: string;
   password: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface IMember extends Document {
