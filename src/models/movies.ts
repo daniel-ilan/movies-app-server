@@ -7,18 +7,12 @@ const movieSchema: Schema = new Schema(
       type: String,
       required: true,
     },
-
     genres: {
       type: Array,
       required: true,
     },
-
     image: {
       type: String,
-      required: true,
-    },
-    permited: {
-      type: Date,
       required: true,
     },
     premiered: {

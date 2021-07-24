@@ -1,1 +1,30 @@
-[{"_id":"60e0269b67be34a548bf23b1","firstName":"Daniel","lastName":"Ilan","username":"test2","sessionTimeOut":false},{"_id":"60dad3d867be34a548beed5b","firstName":"Test","lastName":"Test","username":"test1","sessionTimeOut":50},{"_id":"60ed6fd21049ae1b44952eaf","firstName":"test2","lastName":"testin222","username":"testing","sessionTimeOut":44},{"_id":"60edb63c1049ae1b44952ec9","firstName":"Just","lastName":"testing","username":"withNo Reason","sessionTimeOut":95}]
+[
+  {
+    "_id": "60e0269b67be34a548bf23b1",
+    "firstName": "Daniel",
+    "lastName": "Ilan",
+    "username": "test2",
+    "sessionTimeOut": false
+  },
+  {
+    "_id": "60ed6fd21049ae1b44952eaf",
+    "firstName": "test2",
+    "lastName": "testin222",
+    "username": "testing",
+    "sessionTimeOut": 44
+  },
+  {
+    "_id": "60edb63c1049ae1b44952ec9",
+    "firstName": "Just",
+    "lastName": "testing",
+    "username": "withNo Reason",
+    "sessionTimeOut": 95
+  },
+  {
+    "_id": "60f2d6db54e7911614174040",
+    "firstName": "Daniel",
+    "lastName": "Ilan",
+    "username": "danielll",
+    "sessionTimeOut": 77
+  }
+]

@@ -10,7 +10,7 @@ import {
   deleteUserFromJsonById,
   updateUserJson,
   updateUserPermissions,
-} from '../utils/helpers';
+} from '../utils/usersHelpers';
 import { permissionsFields } from '../utils/consts';
 import { IUser } from '../types';
 

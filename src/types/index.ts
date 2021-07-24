@@ -29,3 +29,14 @@ export interface IUserJson extends IUser {
   username: string;
   password: string;
 }
+
+export type TMovie = {
+  movieId: ObjectId;
+  date: Date;
+};
+
+export interface ISubscription extends IUser {
+  _id?: ObjectId;
+  memberId: ObjectId;
+  movies: TMovie[];
+}
