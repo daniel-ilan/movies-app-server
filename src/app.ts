@@ -5,6 +5,8 @@ import authRoutes from './routes/authRoutes';
 import validateRoute from './routes/validateRoutes';
 import moviesRoutes from './routes/moviesRoutes';
 import userRoutes from './routes/usersRoutes';
+import subscriptionRoutes from './routes/subscriptionsRoutes';
+import memberRoutes from './routes/membersRoutes';
 
 import { populateMembers, populateMovies } from './utils/populateDB';
 
@@ -18,6 +20,8 @@ app.use(authRoutes);
 app.use(validateRoute);
 app.use(moviesRoutes);
 app.use(userRoutes);
+app.use(subscriptionRoutes);
+app.use(memberRoutes);
 
 const port = process.env.PORT || 8082;
 connect()

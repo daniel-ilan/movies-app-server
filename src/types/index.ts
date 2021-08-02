@@ -1,4 +1,4 @@
-import { Document, ObjectId, Date } from 'mongoose';
+import { Document, ObjectId, Date, Types } from 'mongoose';
 
 export interface IUser extends Document {
   _id?: ObjectId;
@@ -9,6 +9,8 @@ export interface IUser extends Document {
 }
 
 export interface IMember extends Document {
+  createdAt: Date;
+  updatedAt: Date;
   name: string;
   email: string;
   city: string;
@@ -31,12 +33,11 @@ export interface IUserJson extends IUser {
 }
 
 export type TMovie = {
-  movieId: ObjectId;
+  movieId: Types.ObjectId;
   date: Date;
 };
 
-export interface ISubscription extends IUser {
-  _id?: ObjectId;
-  memberId: ObjectId;
+export interface ISubscription {
+  memberId: Types.ObjectId;
   movies: TMovie[];
 }

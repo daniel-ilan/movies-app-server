@@ -1,8 +1,8 @@
 import { membersDAL, moviesDAL } from '../DALs/initDataDAL';
-import Member from '../models/members';
+import Member from '../models/memberModel';
 import Movie from '../models/movies';
 import { IMember, IMovie } from '../types';
-import { countMembers } from '../controllers/members';
+import { countMembers } from '../controllers/membersController';
 import { countMovies } from '../controllers/moviesController';
 
 export const populateMembers = async () => {
