@@ -7,7 +7,7 @@ import moviesRoutes from './routes/moviesRoutes';
 import userRoutes from './routes/usersRoutes';
 import subscriptionRoutes from './routes/subscriptionsRoutes';
 import memberRoutes from './routes/membersRoutes';
-
+import path from 'path';
 import { populateMembers, populateMovies } from './utils/populateDB';
 
 const app = express();
@@ -22,6 +22,8 @@ app.use(moviesRoutes);
 app.use(userRoutes);
 app.use(subscriptionRoutes);
 app.use(memberRoutes);
+
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 const port = process.env.PORT || 8082;
 connect()
