@@ -5,7 +5,7 @@ import {
   saveUserPermissions,
   findUserJsonByUsername,
   findAllUsers,
-  findAllUsersPermissions,
+  getUserPermissionsById,
   deleteUserPermissionsById,
   deleteUserFromJsonById,
   updateUserJson,
@@ -17,7 +17,6 @@ import { IUser } from '../types';
 export const getAllUsers = async (_req: Request, res: Response) => {
   try {
     const allUsers = findAllUsers();
-    const allUsersPermissions = findAllUsersPermissions();
     const allUsersDbParams = await User.find().select(
       'createdAt updatedAt _id',
     );
@@ -27,9 +26,7 @@ export const getAllUsers = async (_req: Request, res: Response) => {
         (db: IUser) => db._id.toString() === user._id.toString(),
       );
 
-      const permissions = allUsersPermissions.find(
-        (permisssion) => permisssion._id === user._id,
-      ).permissions;
+      const { permissions } = getUserPermissionsById(user._id.toString());
 
       const { updatedAt, createdAt } = dbParams;
       const { _id, lastName, firstName, username, sessionTimeOut } = user;

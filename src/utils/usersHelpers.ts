@@ -103,3 +103,12 @@ export const findAllUsersPermissions = () => {
 
   return allUsersPermissions;
 };
+
+export const getUserPermissionsById = (userId: string) => {
+  const allUsersPermissions = findAllUsersPermissions();
+  const permissions = allUsersPermissions.find(
+    (permisssion) => permisssion._id === userId,
+  );
+
+  return permissions;
+};
